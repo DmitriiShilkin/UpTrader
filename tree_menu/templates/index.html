@@ -1,0 +1,14 @@
+{% extends 'default.html' %}
+
+{% block title %} Главная {% endblock %}
+
+{% load custom_tags %}
+
+{% block content %}
+    <h2>Древовидное меню</h2>
+    {% if menu %}
+        {% draw_menu 'main_menu' %}
+    {% else %}
+        <p>Меню не найдено.</p>
+    {% endif %}
+{% endblock %}
